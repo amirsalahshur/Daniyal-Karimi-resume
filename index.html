@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniyal Karimi - Sicherheitsfachkraft & Technischer Spezialist</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #2d3748;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            font-size: 16px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        
+        /* Dark Mode Support */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+                color: #e2e8f0;
+            }
+            
+            .header,
+            .sidebar,
+            .main-section {
+                background: rgba(45, 55, 72, 0.95) !important;
+                color: #e2e8f0;
+            }
+            
+            .section-title {
+                color: #e2e8f0 !important;
+                border-bottom-color: #667eea !important;
+            }
+            
+            .header h1 {
+                color: #f7fafc !important;
+            }
+            
+            .header .subtitle {
+                color: #667eea !important;
+            }
+            
+            .header .description {
+                color: #cbd5e0 !important;
+            }
+            
+            .contact-item,
+            .language-item,
+            .experience-item,
+            .education-item {
+                background: rgba(74, 85, 104, 0.3) !important;
+                color: #e2e8f0;
+                border: 1px solid rgba(102, 126, 234, 0.2);
+            }
+            
+            .contact-item:hover,
+            .language-item:hover,
+            .experience-item:hover {
+                background: rgba(74, 85, 104, 0.5) !important;
+            }
+            
+            .job-title,
+            .education-title {
+                color: #f7fafc !important;
+            }
+            
+            .company,
+            .education-institution {
+                color: #667eea !important;
+            }
+            
+            .education-year {
+                color: #a0aec0 !important;
+            }
+            
+            .experience-description li {
+                color: #cbd5e0 !important;
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 48px 40px;
+            margin-bottom: 32px;
+            box-shadow: 0 24px 48px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 5px solid #667eea;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 48px;
+        }
+
+        .header h1 {
+            color: #1a202c;
+            font-size: 2.8em;
+            margin-bottom: 12px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .header .subtitle {
+            color: #667eea;
+            font-size: 1.4em;
+            margin-bottom: 24px;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+        }
+
+        .header .description {
+            color: #4a5568;
+            font-size: 1.15em;
+            max-width: 650px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-weight: 400;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+
+        .sidebar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 32px;
+            box-shadow: 0 24px 48px rgba(0, 0, 0, 0.08);
+            height: fit-content;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .main-section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 32px;
+            box-shadow: 0 24px 48px rgba(0, 0, 0, 0.08);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        /* Focus States for Accessibility */
+        .contact-item:focus,
+        .skill-item:focus,
+        .certification-item:focus,
+        .interest-item:focus,
+        .download-btn:focus {
+            outline: 3px solid #667eea;
+            outline-offset: 2px;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+        }
+        
+        .contact-item:focus-visible,
+        .skill-item:focus-visible,
+        .certification-item:focus-visible,
+        .interest-item:focus-visible,
+        .download-btn:focus-visible {
+            outline: 3px solid #667eea;
+            outline-offset: 2px;
+        }
+        
+        /* Keyboard Navigation */
+        .contact-item[tabindex],
+        .skill-item[tabindex],
+        .certification-item[tabindex],
+        .interest-item[tabindex] {
+            position: relative;
+        }
+        
+        .contact-item:focus:not(:focus-visible),
+        .skill-item:focus:not(:focus-visible),
+        .certification-item:focus:not(:focus-visible),
+        .interest-item:focus:not(:focus-visible),
+        .download-btn:focus:not(:focus-visible) {
+            outline: none;
+        }
+        
+        /* Hover states for better UX */
+        .language-item:hover {
+            background: #e2e8f0;
+            transform: translateX(3px);
+        }
+
+        .section-title {
+            color: #1a202c;
+            font-size: 1.6em;
+            margin-bottom: 24px;
+            font-weight: 700;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            letter-spacing: -0.01em;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+            padding: 14px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            min-height: 48px;
+            position: relative;
+        }
+
+        .contact-item:hover {
+            background: #e2e8f0;
+            transform: translateX(5px);
+        }
+
+        .contact-item i {
+            color: #667eea;
+            margin-right: 15px;
+            font-size: 1.2em;
+            width: 20px;
+        }
+
+        .skill-item {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 10px 18px;
+            margin: 6px;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 0.9em;
+            font-weight: 500;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            min-height: 44px;
+            min-width: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            padding: 14px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            min-height: 48px;
+            transition: all 0.3s ease;
+        }
+
+        .language-level {
+            background: #667eea;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            font-weight: 500;
+        }
+
+        .experience-item {
+            margin-bottom: 32px;
+            padding: 28px;
+            background: #f8f9fa;
+            border-radius: 16px;
+            border-left: 5px solid #667eea;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .experience-item:hover {
+            background: #e2e8f0;
+            transform: translateX(5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 18px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .job-title {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 6px;
+            letter-spacing: -0.01em;
+        }
+
+        .company {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 1.15em;
+        }
+
+        .duration {
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        .experience-description ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .experience-description li {
+            margin-bottom: 8px;
+            padding-left: 25px;
+            position: relative;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        .experience-description li:before {
+            content: "▶";
+            color: #667eea;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .certification-item {
+            background: linear-gradient(45deg, #28a745, #20c997);
+            color: white;
+            padding: 12px 18px;
+            margin: 8px;
+            border-radius: 15px;
+            display: inline-block;
+            font-weight: 500;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            min-height: 44px;
+            min-width: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .certification-item:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(40, 167, 69, 0.4);
+        }
+
+        .interests {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .interest-item {
+            background: #fd7e14;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            min-height: 48px;
+            min-width: 48px;
+        }
+
+        .interest-item:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(253, 126, 20, 0.4);
+        }
+
+        .download-btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 18px 36px;
+            border: none;
+            border-radius: 28px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 24px auto;
+            text-decoration: none;
+            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+            min-height: 56px;
+            min-width: 200px;
+            justify-content: center;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 16px 40px rgba(102, 126, 234, 0.5);
+        }
+
+        /* Tablet Styles */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .container {
+                padding: 20px;
+                max-width: 900px;
+            }
+            
+            .header {
+                padding: 35px 30px;
+            }
+            
+            .header h1 {
+                font-size: 2.3em;
+            }
+            
+            .header .subtitle {
+                font-size: 1.25em;
+            }
+            
+            .main-content {
+                grid-template-columns: 1fr 1.8fr;
+                gap: 25px;
+            }
+            
+            .sidebar,
+            .main-section {
+                padding: 25px;
+            }
+            
+            .section-title {
+                font-size: 1.4em;
+            }
+            
+            .experience-item {
+                padding: 22px;
+            }
+            
+            .profile-img {
+                width: 130px;
+                height: 130px;
+                font-size: 42px;
+            }
+        }
+        
+        /* Large Tablet/Small Desktop */
+        @media (min-width: 1025px) and (max-width: 1199px) {
+            .container {
+                max-width: 1000px;
+                padding: 22px;
+            }
+            
+            .main-content {
+                grid-template-columns: 1fr 2.2fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .header {
+                padding: 25px 20px;
+                margin-bottom: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .header .subtitle {
+                font-size: 1.1em;
+            }
+            
+            .header .description {
+                font-size: 1em;
+            }
+            
+            .profile-img {
+                width: 120px;
+                height: 120px;
+                font-size: 36px;
+            }
+            
+            .sidebar,
+            .main-section {
+                padding: 20px;
+            }
+            
+            .section-title {
+                font-size: 1.3em;
+                margin-bottom: 15px;
+            }
+            
+            .experience-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .duration {
+                margin-top: 0;
+                align-self: flex-start;
+            }
+            
+            .experience-item {
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+            
+            .job-title {
+                font-size: 1.2em;
+            }
+            
+            .interests {
+                gap: 10px;
+            }
+            
+            .interest-item {
+                padding: 8px 15px;
+                font-size: 0.9em;
+            }
+            
+            .skill-item {
+                font-size: 0.85em;
+                padding: 6px 12px;
+                margin: 3px;
+            }
+            
+            .certification-item {
+                font-size: 0.85em;
+                padding: 8px 12px;
+                margin: 5px;
+                display: block;
+                margin-bottom: 8px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 20px 15px;
+            }
+            
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .header .subtitle {
+                font-size: 1em;
+            }
+            
+            .profile-img {
+                width: 100px;
+                height: 100px;
+                font-size: 30px;
+            }
+            
+            .sidebar,
+            .main-section {
+                padding: 15px;
+            }
+            
+            .section-title {
+                font-size: 1.2em;
+            }
+            
+            .contact-item {
+                padding: 8px;
+                font-size: 0.9em;
+            }
+            
+            .language-item {
+                padding: 8px;
+                font-size: 0.9em;
+            }
+            
+            .experience-item {
+                padding: 15px;
+            }
+            
+            .job-title {
+                font-size: 1.1em;
+            }
+            
+            .company {
+                font-size: 1em;
+            }
+            
+            .download-btn {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Loading States */
+        .loading {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Skeleton Loading */
+        .skeleton {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        
+        /* Scroll animations */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Progressive enhancement */
+        .no-js .fade-in,
+        .no-js .loading,
+        .no-js .scroll-reveal {
+            opacity: 1;
+            transform: none;
+            animation: none;
+        }
+        
+        /* Reduce motion for accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            
+            .fade-in,
+            .loading,
+            .scroll-reveal {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+
+        .education-item {
+            background: #f8f9fa;
+            padding: 24px;
+            border-radius: 16px;
+            border-left: 5px solid #667eea;
+            margin-bottom: 24px;
+        }
+
+        .education-title {
+            font-weight: 700;
+            color: #1a202c;
+            font-size: 1.3em;
+            letter-spacing: -0.01em;
+        }
+
+        .education-institution {
+            color: #667eea;
+            font-weight: 600;
+            margin: 6px 0;
+        }
+
+        .education-year {
+            color: #718096;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+        
+        /* Print Styles */
+        @media print {
+            * {
+                -webkit-print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+            
+            body {
+                background: white !important;
+                font-size: 12pt;
+                line-height: 1.4;
+                color: #000 !important;
+            }
+            
+            .container {
+                max-width: none;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .header {
+                background: white !important;
+                box-shadow: none !important;
+                backdrop-filter: none !important;
+                border-radius: 0 !important;
+                padding: 20pt;
+                margin-bottom: 15pt;
+                page-break-inside: avoid;
+            }
+            
+            .main-content {
+                display: block !important;
+                gap: 0;
+                margin-bottom: 0;
+            }
+            
+            .sidebar {
+                background: white !important;
+                box-shadow: none !important;
+                backdrop-filter: none !important;
+                border-radius: 0 !important;
+                padding: 15pt;
+                margin-bottom: 15pt;
+                page-break-inside: avoid;
+            }
+            
+            .main-section {
+                background: white !important;
+                box-shadow: none !important;
+                backdrop-filter: none !important;
+                border-radius: 0 !important;
+                padding: 15pt;
+            }
+            
+            .section-title {
+                border-bottom: 2pt solid #000 !important;
+                color: #000 !important;
+                font-size: 14pt;
+                margin-bottom: 10pt;
+            }
+            
+            .header h1 {
+                color: #000 !important;
+                font-size: 18pt;
+            }
+            
+            .header .subtitle {
+                color: #000 !important;
+                font-size: 12pt;
+            }
+            
+            .header .description {
+                color: #000 !important;
+                font-size: 10pt;
+            }
+            
+            .contact-item,
+            .language-item,
+            .experience-item,
+            .education-item {
+                background: white !important;
+                border: 1pt solid #ccc !important;
+                border-radius: 0 !important;
+                margin-bottom: 8pt;
+                padding: 8pt;
+                page-break-inside: avoid;
+            }
+            
+            .skill-item,
+            .certification-item,
+            .interest-item {
+                background: #f0f0f0 !important;
+                color: #000 !important;
+                border: 1pt solid #ccc !important;
+                margin: 2pt;
+                padding: 4pt 8pt;
+                display: inline-block;
+            }
+            
+            .job-title,
+            .education-title {
+                color: #000 !important;
+                font-size: 12pt;
+            }
+            
+            .company,
+            .education-institution {
+                color: #000 !important;
+                font-size: 10pt;
+            }
+            
+            .duration,
+            .language-level {
+                background: #f0f0f0 !important;
+                color: #000 !important;
+                border: 1pt solid #ccc !important;
+                padding: 2pt 6pt;
+            }
+            
+            .experience-description li {
+                color: #000 !important;
+                font-size: 10pt;
+            }
+            
+            .download-btn {
+                display: none !important;
+            }
+            
+            .profile-img {
+                background: #f0f0f0 !important;
+                color: #000 !important;
+                border: 2pt solid #000 !important;
+            }
+            
+            .interests {
+                display: block;
+            }
+            
+            .interest-item {
+                display: inline-block;
+                margin: 2pt;
+            }
+            
+            .fade-in {
+                animation: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="no-js">
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header fade-in">
+            <div class="profile-img">
+                <i class="fas fa-user"></i>
+            </div>
+            <h1>Daniyal Karimi</h1>
+            <div class="subtitle">Sicherheitsfachkraft & Technischer Spezialist</div>
+            <p class="description">
+                Zuverlässiger, technisch versierter Facharbeiter mit umfangreicher Erfahrung in Sicherheitsdienst, 
+                CNC-Bedienung, Schweißtechnik und technischer Wartung. Teamfähig, belastbar und einsatzbereit für Schichtdienste.
+            </p>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Sidebar -->
+            <aside class="sidebar fade-in">
+                <!-- Contact Information -->
+                <section>
+                    <h2 class="section-title">
+                        <i class="fas fa-address-card"></i>
+                        Kontakt
+                    </h2>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>015730674972</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>Daniyal.karimi99@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Dotzheimer Str. 111<br>65197 Wiesbaden</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>02.05.1999 (26 Jahre)</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Ledig</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-flag"></i>
+                        <span>Deutsche Staatsangehörigkeit</span>
+                    </div>
+                </section>
+
+                <!-- Languages -->
+                <section>
+                    <h2 class="section-title">
+                        <i class="fas fa-language"></i>
+                        Sprachen
+                    </h2>
+                    <div class="language-item">
+                        <span>Deutsch</span>
+                        <span class="language-level">Sehr gut</span>
+                    </div>
+                    <div class="language-item">
+                        <span>Englisch</span>
+                        <span class="language-level">Grundkenntnisse</span>
+                    </div>
+                    <div class="language-item">
+                        <span>Persisch</span>
+                        <span class="language-level">Muttersprache</span>
+                    </div>
+                </section>
+
+                <!-- Skills -->
+                <section>
+                    <h2 class="section-title">
+                        <i class="fas fa-cogs"></i>
+                        Kenntnisse
+                    </h2>
+                    <div>
+                        <span class="skill-item">Microsoft Office</span>
+                        <span class="skill-item">Technisches Verständnis</span>
+                        <span class="skill-item">Kommunikationsfähigkeit</span>
+                        <span class="skill-item">Teamarbeit</span>
+                        <span class="skill-item">CNC-Bedienung</span>
+                        <span class="skill-item">Schweißtechnik</span>
+                        <span class="skill-item">Sicherheitstechnik</span>
+                        <span class="skill-item">Gabelstapler</span>
+                    </div>
+                </section>
+
+                <!-- Certifications -->
+                <section>
+                    <h2 class="section-title">
+                        <i class="fas fa-certificate"></i>
+                        Zertifikate & Lizenzen
+                    </h2>
+                    <div>
+                        <span class="certification-item">Führerscheine: AM, A1, A2, A, B, L</span>
+                        <span class="certification-item">Gabelstaplerschein</span>
+                        <span class="certification-item">Hebebühnenschein</span>
+                        <span class="certification-item">Sachkundenprüfung §34a GewO</span>
+                        <span class="certification-item">Erste-Hilfe Zertifikat</span>
+                    </div>
+                </section>
+
+                <!-- Interests -->
+                <section>
+                    <h2 class="section-title">
+                        <i class="fas fa-heart"></i>
+                        Interessen
+                    </h2>
+                    <div class="interests">
+                        <div class="interest-item">
+                            <i class="fas fa-book"></i>
+                            <span>Lesen</span>
+                        </div>
+                        <div class="interest-item">
+                            <i class="fas fa-running"></i>
+                            <span>Sport</span>
+                        </div>
+                        <div class="interest-item">
+                            <i class="fas fa-skiing"></i>
+                            <span>Skifahren</span>
+                        </div>
+                        <div class="interest-item">
+                            <i class="fas fa-swimmer"></i>
+                            <span>Schwimmen</span>
+                        </div>
+                    </div>
+                </section>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="main-section fade-in">
+                <!-- Professional Experience -->
+                <section>
+                    <h2 class="section-title">
+                        <i class="fas fa-briefcase"></i>
+                        Berufserfahrung
+                    </h2>
+                    
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="job-title">Sicherheitsfachkraft</div>
+                                <div class="company">F-DS & H.A.R.T. SICHERHEITSDIENST GMBH, Wiesbaden</div>
+                            </div>
+                            <div class="duration">03/2021 - Heute (4 Jahre)</div>
+                        </div>
+                        <div class="experience-description">
+                            <ul>
+                                <li>Durchführung von Kontroll- und Überwachungsaufgaben</li>
+                                <li>Verantwortung für Koordinierung von Projekten</li>
+                                <li>Sicherstellung von termingerechter Ausführung und Einhaltung von Qualitätsstandards</li>
+                                <li>Kommunikation mit Projektleitung und Auftraggebern</li>
+                                <li>Technische Unterstützung bei einer Waschanlage</li>
+                                <li>Transportarbeit mit einem Gabelstapler</li>
+                                <li>Einsatz an verschiedenen Objekten als Springer</li>
+                                <li>Leiharbeiter im Auftrag von Firmen wie Knettenbrech + gurdulic, Honeywell Elster GmbH, Vitronic, ESWE, DOW, Polizei Hessen</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="job-title">Industriefacharbeiter</div>
+                                <div class="company">GITI PASAND INDUSTRIAL GROUP, Esfahan, Iran</div>
+                            </div>
+                            <div class="duration">08/2018 - 11/2019 (1 Jahr)</div>
+                        </div>
+                        <div class="experience-description">
+                            <ul>
+                                <li>Bedienung von CNC TN50 Maschinen</li>
+                                <li>CO2-Schweißarbeiten</li>
+                                <li>Mitarbeit in der Produktion</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="job-title">Schweißer (Praktikant)</div>
+                                <div class="company">POUYANFAR ESPADANA CO., Esfahan, Iran</div>
+                            </div>
+                            <div class="duration">01/2017 - 07/2017 (6 Monate)</div>
+                        </div>
+                        <div class="experience-description">
+                            <ul>
+                                <li>Teilnahme an einem 6-monatigen Schweißkurs (praktische Ausbildung)</li>
+                                <li>Praktische Schulung in verschiedenen Schweißverfahren</li>
+                                <li>Arbeit mit industriellen Schweißgeräten</li>
+                                <li>Anwendung sicherheitsrelevanter Vorschriften im Schweißbereich</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Education -->
+                <section>
+                    <h2 class="section-title">
+                        <i class="fas fa-graduation-cap"></i>
+                        Bildung
+                    </h2>
+                    
+                    <div class="education-item">
+                        <div class="education-title">Fachschulabschluss - Konstruieren und Herstellung (Abformen)</div>
+                        <div class="education-institution">Technische Fakultät Shahid Sadoughi, Yazd, Iran</div>
+                        <div class="education-year">2016 - 2018</div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Download Button -->
+        <div style="text-align: center;">
+            <button class="download-btn" onclick="window.print()">
+                <i class="fas fa-download"></i>
+                Lebenslauf herunterladen
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Remove no-js class when JavaScript is available
+        document.documentElement.classList.remove('no-js');
+        document.body.classList.remove('no-js');
+        
+        // Error handling for missing elements
+        function safeQuerySelector(selector) {
+            try {
+                return document.querySelector(selector);
+            } catch (e) {
+                console.warn('Element not found:', selector);
+                return null;
+            }
+        }
+        
+        function safeQuerySelectorAll(selector) {
+            try {
+                return document.querySelectorAll(selector);
+            } catch (e) {
+                console.warn('Elements not found:', selector);
+                return [];
+            }
+        }
+        
+        // Add smooth scrolling and animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate elements on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all sections with error handling
+            const observeElements = safeQuerySelectorAll('.experience-item, .education-item');
+            observeElements.forEach(item => {
+                if (item) {
+                    item.classList.add('scroll-reveal');
+                    observer.observe(item);
+                }
+            });
+
+            // Add click effects to skill items with error handling
+            const clickableItems = safeQuerySelectorAll('.skill-item, .certification-item, .interest-item');
+            clickableItems.forEach(item => {
+                if (item) {
+                    // Add tabindex for keyboard navigation
+                    item.setAttribute('tabindex', '0');
+                    
+                    // Click effect
+                    item.addEventListener('click', function() {
+                        this.style.transform = 'scale(0.95)';
+                        setTimeout(() => {
+                            this.style.transform = '';
+                        }, 150);
+                    });
+                    
+                    // Keyboard support
+                    item.addEventListener('keydown', function(e) {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            this.click();
+                        }
+                    });
+                }
+            });
+
+            // Contact items click functionality with error handling
+            const contactItems = safeQuerySelectorAll('.contact-item');
+            contactItems.forEach(item => {
+                if (item) {
+                    const text = item.textContent ? item.textContent.trim() : '';
+                    
+                    if (text.includes('@')) {
+                        item.style.cursor = 'pointer';
+                        item.setAttribute('tabindex', '0');
+                        item.setAttribute('role', 'button');
+                        item.setAttribute('aria-label', 'Send email');
+                        
+                        const clickHandler = () => {
+                            try {
+                                const email = text.match(/[\w.-]+@[\w.-]+\.[\w]+/);
+                                if (email) {
+                                    window.location.href = `mailto:${email[0]}`;
+                                }
+                            } catch (e) {
+                                console.warn('Email link error:', e);
+                            }
+                        };
+                        
+                        item.addEventListener('click', clickHandler);
+                        item.addEventListener('keydown', (e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                                e.preventDefault();
+                                clickHandler();
+                            }
+                        });
+                    } else if (text.match(/^\d/)) {
+                        item.style.cursor = 'pointer';
+                        item.setAttribute('tabindex', '0');
+                        item.setAttribute('role', 'button');
+                        item.setAttribute('aria-label', 'Call phone number');
+                        
+                        const clickHandler = () => {
+                            try {
+                                const phone = text.match(/[\d+\s()-]+/);
+                                if (phone) {
+                                    window.location.href = `tel:${phone[0].replace(/\s/g, '')}`;
+                                }
+                            } catch (e) {
+                                console.warn('Phone link error:', e);
+                            }
+                        };
+                        
+                        item.addEventListener('click', clickHandler);
+                        item.addEventListener('keydown', (e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                                e.preventDefault();
+                                clickHandler();
+                            }
+                        });
+                    }
+                }
+            });
+        });
+
+        // Print function with error handling
+        function downloadResume() {
+            try {
+                window.print();
+            } catch (e) {
+                console.warn('Print function error:', e);
+                alert('Printing not available. Please use your browser\'s print function (Ctrl+P or Cmd+P).');
+            }
+        }
+        
+        // Add loading state management
+        window.addEventListener('load', function() {
+            const loadingElements = safeQuerySelectorAll('.loading');
+            loadingElements.forEach(el => {
+                if (el) {
+                    el.classList.add('loaded');
+                }
+            });
+        });
+        
+        // Enhanced scroll reveal with Intersection Observer
+        if ('IntersectionObserver' in window) {
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            const revealElements = safeQuerySelectorAll('.scroll-reveal');
+            revealElements.forEach(el => {
+                if (el) {
+                    revealObserver.observe(el);
+                }
+            });
+        } else {
+            // Fallback for browsers without Intersection Observer
+            const revealElements = safeQuerySelectorAll('.scroll-reveal');
+            revealElements.forEach(el => {
+                if (el) {
+                    el.classList.add('revealed');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
